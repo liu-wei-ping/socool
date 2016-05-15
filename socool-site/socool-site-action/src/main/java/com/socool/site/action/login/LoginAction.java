@@ -48,7 +48,7 @@ public class LoginAction {
 	 * @param session
 	 * @return
 	 */
-	@RequestMapping(value = "/login.shtml")
+	@RequestMapping(value = "/login.html")
 	public ModelAndView login(final HttpSession session) {
 		final ModelAndView model = new ModelAndView();
 		final PublicKeyPo publicKeyMap = RSAUtils.getPublicKeyMap(true);

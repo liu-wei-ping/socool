@@ -13,7 +13,7 @@ public class Constants {
 	/**
 	 * 登陆页面
 	 */
-	public final static String LOGIN_URL = "/login/login.shtml";
+	public final static String LOGIN_URL = "/login/login.html";
 	/**
 	 * 成功标识 KEY
 	 */
