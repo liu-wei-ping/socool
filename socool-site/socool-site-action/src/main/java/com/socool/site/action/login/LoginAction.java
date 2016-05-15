@@ -24,7 +24,7 @@ import com.socool.site.bo.utils.PublicKeyPo;
 
 /**
  * @author lwp
- * @date 2016年5月11日
+ * @date 2016骞�5鏈�11鏃�
  */
 @Controller
 @RequestMapping("login")
@@ -41,7 +41,7 @@ public class LoginAction {
 	}
 
 	/**
-	 * 登录页面
+	 * 鐧诲綍椤甸潰
 	 *
 	 * @return
 	 */
@@ -60,7 +60,7 @@ public class LoginAction {
 	@RequestMapping(value = "/sign.shtml", method = RequestMethod.POST)
 	public Map<String, Object> sign(@RequestBody final UserInfo userInfo, final HttpSession session,
 			final HttpServletRequest request) {
-		final String sessionId = session.getId();
+//		final String sessionId = session.getId();
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
 		final Map<String, Object> map = new HashMap<String, Object>();
