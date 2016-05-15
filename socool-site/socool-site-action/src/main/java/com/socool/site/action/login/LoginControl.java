@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.socool.site.action.login;
 
@@ -17,9 +17,10 @@ public class LoginControl {
 	 * @return
 	 */
 	@RequestMapping("/cool.html")
-	public ModelAndView login(){
-		final ModelAndView model=new ModelAndView();
-		model.setViewName("cool_index");
+	public ModelAndView login() {
+		final ModelAndView model = new ModelAndView();
+		// model.setViewName("cool_index");
+		model.setViewName("test_index");
 		return model;
 	}
 }
