@@ -61,7 +61,6 @@ public class LoginAction {
 	public Map<String, Object> sign(@RequestBody final UserInfo userInfo, final HttpSession session,
 			final HttpServletRequest request) {
 		final String sessionId = session.getId();
-		System.out.println(sessionId + ">>>>>>>>>>>>>>>>>>>>>>>>>");
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
 		final Map<String, Object> map = new HashMap<String, Object>();
