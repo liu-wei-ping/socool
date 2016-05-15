@@ -64,11 +64,12 @@ public class LoginAction {
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
 		final Map<String, Object> map = new HashMap<String, Object>();
-		if (code != null && code.toString().equalsIgnoreCase(userInfo.getCode())) {
-			final String pwd = RSAUtils.decryptStringByJs(userInfo.getPassword());
-			System.out.println(pwd);
-			f = true;
-		}
+		// if (code != null &&
+		// code.toString().equalsIgnoreCase(userInfo.getCode())) {
+		final String pwd = RSAUtils.decryptStringByJs(userInfo.getPassword());
+		System.out.println(pwd);
+		f = true;
+		// }
 		map.put(Constants.SUCCESS, f);
 		return map;
 	}

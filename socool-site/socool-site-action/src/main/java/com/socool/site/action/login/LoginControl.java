@@ -14,6 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginControl {
 	/**
+	 * git提交
+	 * 
 	 * @return
 	 */
 	@RequestMapping("/cool.html")
