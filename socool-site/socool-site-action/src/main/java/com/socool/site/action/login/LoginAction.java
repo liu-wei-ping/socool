@@ -23,13 +23,17 @@ import com.socool.site.bo.userinfo.UserInfo;
 import com.socool.site.bo.utils.PublicKeyPo;
 
 /**
- * @author lwp
- * @date 2016骞�5鏈�11鏃�
+ * @author mr.lwp
+ * @see 2016年5月15日
  */
 @Controller
 @RequestMapping("login")
 public class LoginAction {
 
+	/**
+	 * @param req
+	 * @param resp
+	 */
 	@RequestMapping(value = "/code.shtml")
 	public void identifyingCode(final HttpServletRequest req, final HttpServletResponse resp) {
 		try {
@@ -41,8 +45,7 @@ public class LoginAction {
 	}
 
 	/**
-	 * 鐧诲綍椤甸潰
-	 *
+	 * @param session
 	 * @return
 	 */
 	@RequestMapping(value = "/login.shtml")
@@ -56,11 +59,17 @@ public class LoginAction {
 		return model;
 	}
 
+	/**
+	 * @param userInfo
+	 * @param session
+	 * @param request
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value = "/sign.shtml", method = RequestMethod.POST)
 	public Map<String, Object> sign(@RequestBody final UserInfo userInfo, final HttpSession session,
 			final HttpServletRequest request) {
-//		final String sessionId = session.getId();
+		// final String sessionId = session.getId();
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
 		final Map<String, Object> map = new HashMap<String, Object>();

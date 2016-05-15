@@ -10,10 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @date 2016年5月11日
  */
 @Controller
-@RequestMapping("index")
+@RequestMapping("main")
 public class IndexAction {
-	@RequestMapping("/index.shtml")
+	@RequestMapping("/index.html")
 	public ModelAndView index() {
-		return new ModelAndView("index");
+		return new ModelAndView("main");
 	}
 }

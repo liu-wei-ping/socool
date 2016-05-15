@@ -59,7 +59,7 @@
 <script type="text/javascript">
 	document.write("<script language=\"javascript\" src=\"../js/security.js\" > <\/script>");
 	var login_url = "sign.shtml";
-	var return_url = "../index/index.shtml"
+	var return_url = "../main/index.html"
 	function getPicCode() {
 		$("#code-img").attr("src", "code.shtml?rnd=" + Math.random());
 	}
@@ -91,7 +91,6 @@
 		;
 		var publicKey = RSAUtils.getKeyPair('${key.exponent}', '',
 				'${key.modulus}');
-		console.log("---1");
 		var params = {};
 		var fields = $('#login-form').serializeArray();
 		$.each(fields, function(i, field) {
@@ -109,7 +108,6 @@
 			contentType : 'application/json;charset=utf-8',
 			dataType : 'json',
 			success : function(data) {
-				alert(data.success);
 				if (data.success) {
 					setTimeout(function() {
 						location.href = return_url;
