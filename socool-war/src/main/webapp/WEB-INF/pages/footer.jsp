@@ -12,5 +12,5 @@ body {background: #686868; font-family:Arial, Helvetica, sans-serif; font-size:1
 
 <body>
 <div id="all">
-    <div id="welcome">Copyright © 1996-2015 SINA Corporation, All Rights Reserved </div>
+    <div id="welcome">Copyright © 1996-2016 SOCOOL Corporation, All Rights Reserved </div>
 </div></body></html>

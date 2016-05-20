@@ -17,7 +17,7 @@ public class IndexAction {
 	public ModelAndView center(@PathVariable(value = "type") final String type) {
 		final ModelAndView model = new ModelAndView();
 		model.addObject("type", type);
-		model.setViewName(type + "/center");
+		model.setViewName(type + "/" + type + "_center");
 		return model;
 	}
 
@@ -25,7 +25,7 @@ public class IndexAction {
 	public ModelAndView footer(@PathVariable(value = "type") final String type) {
 		final ModelAndView model = new ModelAndView();
 		model.addObject("type", type);
-		model.setViewName(type + "/footer");
+		model.setViewName("footer");
 		return model;
 	}
 
@@ -33,7 +33,7 @@ public class IndexAction {
 	public ModelAndView hearder(@PathVariable(value = "type") final String type) {
 		final ModelAndView model = new ModelAndView();
 		model.addObject("type", type);
-		model.setViewName(type + "/header");
+		model.setViewName(type + "/" + type + "_header");
 		return model;
 	}
 

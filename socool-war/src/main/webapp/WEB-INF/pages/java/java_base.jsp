@@ -5,11 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link  rel="stylesheet" type="text/css"  href="../../css/center.css"/>
- <script type="text/javascript" src="../../js/jquery.easyui.min.js" ></script>
- <script src="../../js/menu.js"></script>
 </head>
 <body>
-		<div>center.........</div>
+	<div>JAVA...</div>
 </body>
 </html>

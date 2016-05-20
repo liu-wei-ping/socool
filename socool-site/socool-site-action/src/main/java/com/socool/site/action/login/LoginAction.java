@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.socool.site.biz.utils.Constants;
 import com.socool.site.biz.utils.IdentifyingCodeUtil;
@@ -58,6 +59,12 @@ public class LoginAction {
 		model.addObject("code", code);
 		model.setViewName("login");
 		return model;
+	}
+
+	@RequestMapping(value = "/quit.html")
+	public String quit(final HttpSession session, final RedirectAttributes attr) {
+		session.invalidate();
+		return "redirect:/ login.html";
 	}
 
 	/**

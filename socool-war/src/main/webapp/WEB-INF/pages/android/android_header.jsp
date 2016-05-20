@@ -45,13 +45,15 @@ ul { list-style:none;margin:0px; overflow:hidden;}
 <body>
 <div id="all">
     <div id="banner">
-			<h1>PHP</h1>
+			<h1>Android</h1>
 	        <div id="welcome">
-            欢迎!    </div>
+            欢迎! ${sessionScope['socool_user']['username']}
+                        &nbsp;     </div>
        <ul id="manage">
 <!--             <li><a class="" href="http://jyzd.sina.com/" target="_blank">官网首页</a></li> -->
 <!--             <li><a href="###" target="b_main" style=C"display: none;">修改密码</a></li> -->
-            <li><a class="logout" href="${pageContext.request.contextPath}/login/unLogin.html" target="_top">退出管理</a></li>
+            <li><a class="logout" href="${pageContext.request.contextPath}/login/quit.html" target="_top">退出管理</a></li>
+            <li><a href="${pageContext.request.contextPath}/main/index.html" target="_top">首 页</a></li>
         </ul>
     </div>
    

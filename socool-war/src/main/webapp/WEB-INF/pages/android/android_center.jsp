@@ -6,41 +6,44 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <link  rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/css/center.css"/>
-<script src="http://dl.games.sina.com.cn/wcpan/d/servermgr/js/jquery-1.11.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
  <script src="${pageContext.request.contextPath}/js/menu.js"></script>
  <style type="text/css">
  	#main-content-frame {width: 100%; margin: 0px auto; padding-top: 6px; text-align: center; height: 100%;overflow: auto;}
  </style>
 <script type="text/javascript">
+var base='<%="http://" + request.getServerName() + ":" + request.getServerPort()+request.getContextPath()+"/"%>';
     function showMainContent(u) {
     	var content=$('#main-content');
 //         $('#main-content').load(u,function(){});
 		 var content_frame = $('#main-content-frame');
         if(u.match(/^http:\/\/.*$/)){
             content.hide();
-            content_frame.attr('src',u).show();
+//             content_frame.attr('src',u).show();
         }else{
-        	u='${pageContext.request.contextPath}/'+u;
-	        $.ajax({
-	        	async: false,
-	            url: u,
-	            cache: false,
-	            type: 'Get',
-	            dataType: 'html',
-	            success: function(res) {
-	            	content_frame.hide();
-	                try {
-	                    var jsonRes = eval("(" + res + ")");
-	                    if (jsonRes.error && jsonRes.error != '') {
-	                        content.html(jsonRes.error);
-	                        return;
-	                    }
-	                } catch (err) {
-	                }
-	                content.html(res);
-	            }
-	        });
+        	u=base+u;
+//         	u='${pageContext.request.contextPath}/'+u;
+// 	        $.ajax({
+// 	        	async: false,
+// 	            url: u,
+// 	            cache: false,
+// 	            type: 'Get',
+// 	            dataType: 'html',
+// 	            success: function(res) {
+// 	            	content_frame.hide();
+// 	                try {
+// 	                    var jsonRes = eval("(" + res + ")");
+// 	                    if (jsonRes.error && jsonRes.error != '') {
+// 	                        content.html(jsonRes.error);
+// 	                        return;
+// 	                    }
+// 	                } catch (err) {
+// 	                }
+// 	                content.html(res);
+// 	            }
+// 	        });
         }
+        content_frame.attr('src',u).show();
     }
 
 // 	function replaceMainContent(){
@@ -63,8 +66,8 @@
     
 <!-- 	<iframe id="supportiframe" name="supportiframe" onload="replaceMainContent();" style="display:none"></iframe> -->
     <div id="all-content">
-    <div name="main-content" id="main-content"></div>
-    <iframe id="main-content-frame" frameborder="0" name="main-content-frame" src="" style="display:none"></iframe>
+<!--     <div name="main-content" id="main-content"></div> -->
+    <iframe id="main-content-frame" frameborder="0" name="main-content-frame" src="" scrolling="no" style="display:none"></iframe>
 <script type="text/javascript">
 // $(document).ready(function() {
 
@@ -91,7 +94,7 @@
 
 // 		var leftmenu=${leftmenu};
 		
-		var leftmenu=[{name:"PHP技术",submenu:[{name:'PHP入门',url:"http://www.php100.com/html/php/rumen/"}]},{name:"PHP面试",submenu:[{name:'PHP2-1',url:'php-info/base.html'}]}];
+		var leftmenu=[{name:"Android技术",submenu:[{name:'Android入门',url:"http://www.android-studio.org/"}]},{name:"Android面试",submenu:[{name:'Android-1',url:'android-info/base.html'}]}];
 	$(function(){
 		var m=new AccordionMenu({containerCls:'.wrap-menu',menuArrs:leftmenu});
 		$("#tree-area").find("a[url!='javascript:void(0)']").click(function(){

@@ -23,4 +23,9 @@ public class Constants {
 	 * 成功标识 KEY
 	 */
 	public final static String SUCCESS = "success";
+
+	public final static String TYPE_ANDROID = "android";
+	public final static String TYPE_IOS = "ios";
+	public final static String TYPE_JAVA = "java";
+	public final static String TYPE_PHP = "php";
 }
