@@ -1,28 +1,26 @@
-/**
- *
- */
-package com.socool.site.action.login;
+/****/
+package com.socool.site.action.php;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @author lwp<liuweiping@wcp.sina.com> @2016年1月16日
- *
+ * @author liuwp
+ * @date 2016年5月20日
  */
 @Controller
-public class LoginControl {
+@RequestMapping("php-info")
+public class PhpBaseAction {
 	/**
-	 * git提交
+	 * PHP 基本知识
 	 * 
 	 * @return
 	 */
-	@RequestMapping("/cool.html")
-	public ModelAndView login() {
+	@RequestMapping(value = "/base.html")
+	public ModelAndView phpBaseInfo() {
 		final ModelAndView model = new ModelAndView();
-		// model.setViewName("cool_index");
-		model.setViewName("test_index");
+		model.setViewName("php/php_base");
 		return model;
 	}
 }

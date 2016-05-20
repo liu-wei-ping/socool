@@ -11,10 +11,10 @@
 <body>
 	<div class="container">
 		<ul>
-			<li><a href="${pageContext.request.contextPath}/java/index.html" class="main-link">JAVA</a></li>
-			<li><a href="${pageContext.request.contextPath}/php/index.html" class="main-link">PHP</a></li>
-			<li><a href="${pageContext.request.contextPath}/android/index.html" class="main-link">Android</a></li>
-			<li><a href="${pageContext.request.contextPath}/ios/index.html" class="main-link">IOS</a></li>
+			<li><a href="${pageContext.request.contextPath}/main/java/index.html" class="main-link">JAVA</a></li>
+			<li><a href="${pageContext.request.contextPath}/main/php/index.html" class="main-link">PHP</a></li>
+			<li><a href="${pageContext.request.contextPath}/main/android/index.html" class="main-link">Android</a></li>
+			<li><a href="${pageContext.request.contextPath}/main/ios/index.html" class="main-link">IOS</a></li>
 		</ul>
 	</div>
 </body>
