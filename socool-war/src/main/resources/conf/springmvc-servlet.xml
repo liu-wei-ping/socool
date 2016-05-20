@@ -31,6 +31,15 @@
 			</map>
 		</property>
 	</bean>
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+				<mvc:mapping path="/**" />
+				<mvc:exclude-mapping path="/login/**"/>
+			<bean
+				class="com.socool.site.biz.interceptor.DisjunctorDispatcherInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
 	<!-- jsp视图解析器 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

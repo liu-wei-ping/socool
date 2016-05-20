@@ -157,12 +157,13 @@
 		<servlet-name>http-servlet</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
-	<!-- <servlet-mapping> -->
-	<!-- <servlet-name>http-servlet</servlet-name> -->
-	<!-- </servlet-mapping> -->
-	<!-- <servlet-mapping> -->
-	<!-- <servlet-name>http-servlet</servlet-name> -->
-	<!-- </servlet-mapping> -->
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.png</url-pattern>
+		<url-pattern>*.jpg</url-pattern>
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>

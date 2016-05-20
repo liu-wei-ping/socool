@@ -20,6 +20,7 @@
             content.hide();
             content_frame.attr('src',u).show();
         }else{
+        	u='${pageContext.request.contextPath}/'+u;
 	        $.ajax({
 	        	async: false,
 	            url: u,
@@ -90,7 +91,7 @@
 
 // 		var leftmenu=${leftmenu};
 		
-		var leftmenu=[{name:"PHP技术",submenu:[{name:'PHP入门',url:'http://www.php100.com/html/php/rumen/'}]},{name:"PHP面试",submenu:[{name:'PHP2-1',url:'www.baidu.com'}]}];
+		var leftmenu=[{name:"PHP技术",submenu:[{name:'PHP入门',url:"http://www.php100.com/html/php/rumen/"}]},{name:"PHP面试",submenu:[{name:'PHP2-1',url:'php-info/base.html'}]}];
 	$(function(){
 		var m=new AccordionMenu({containerCls:'.wrap-menu',menuArrs:leftmenu});
 		$("#tree-area").find("a[url!='javascript:void(0)']").click(function(){

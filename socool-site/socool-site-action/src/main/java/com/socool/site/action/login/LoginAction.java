@@ -35,7 +35,8 @@ public class LoginAction {
 	 * @param resp
 	 */
 	@RequestMapping(value = "/code.shtml")
-	public void identifyingCode(final HttpServletRequest req, final HttpServletResponse resp) {
+	public void identifyingCode(final HttpServletRequest req,
+			final HttpServletResponse resp) {
 		try {
 			IdentifyingCodeUtil.getCode(req, resp);
 		} catch (final IOException var4) {
@@ -67,8 +68,8 @@ public class LoginAction {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/sign.shtml", method = RequestMethod.POST)
-	public Map<String, Object> sign(@RequestBody final UserInfo userInfo, final HttpSession session,
-			final HttpServletRequest request) {
+	public Map<String, Object> sign(@RequestBody final UserInfo userInfo,
+			final HttpSession session, final HttpServletRequest request) {
 		// final String sessionId = session.getId();
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
@@ -77,6 +78,9 @@ public class LoginAction {
 		// code.toString().equalsIgnoreCase(userInfo.getCode())) {
 		final String pwd = RSAUtils.decryptStringByJs(userInfo.getPassword());
 		System.out.println(pwd);
+		userInfo.setUid(1);
+		userInfo.setPassword("");
+		session.setAttribute(Constants.SESSION_USER, userInfo);
 		f = true;
 		// }
 		map.put(Constants.SUCCESS, f);

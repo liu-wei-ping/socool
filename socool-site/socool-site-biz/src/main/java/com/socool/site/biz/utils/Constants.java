@@ -15,6 +15,11 @@ public class Constants {
 	 */
 	public final static String LOGIN_URL = "/login/login.html";
 	/**
+	 * 登录成功凭证 KEY
+	 */
+	public static final String SESSION_USER = "socool_user";
+
+	/**
 	 * 成功标识 KEY
 	 */
 	public final static String SUCCESS = "success";
