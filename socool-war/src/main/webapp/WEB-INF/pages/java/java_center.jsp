@@ -23,6 +23,12 @@
 <script type="text/javascript">
 	$(function() {
 		var leftmenu = [ {
+			name : "JAVA面试",
+			submenu : [ {
+				name : 'java基础测试',
+				url : 'java-info/base.html'
+			}]
+		},{
 			name : "JAVA技术",
 			submenu : [ {
 				name : 'JAVA入门',
@@ -34,13 +40,7 @@
 					}]
 				}]
 			} ]
-		}, {
-			name : "JAVA面试",
-			submenu : [ {
-				name : 'jAVA-1',
-				url : 'java-info/base.html'
-			} ]
-		} ];
+		}];
 		menuTree(leftmenu, '${pageContext.request.contextPath}');
 	})
 </script>
@@ -51,7 +51,7 @@
 		<div name="main-content" id="main-content"></div>
 		<iframe id="main-content-frame" frameborder="0"
 			name="main-content-frame" src="" scrolling="no"
-			style="display: block;"></iframe>
+			style="display: none;"></iframe>
 		<ul class="vakata-context"></ul>
 		<div style="display: block;" id="jstree-marker">&nbsp;</div>
 </body>
