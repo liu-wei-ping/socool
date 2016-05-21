@@ -27,6 +27,13 @@ public class JavaBaseAction extends BaseAction {
 		return model;
 	}
 
+	@RequestMapping(value = "/base2.html")
+	public ModelAndView javaBaseInfo1() {
+		final ModelAndView model = new ModelAndView();
+		model.setViewName(getViewUrl("base2"));
+		return model;
+	}
+
 	@Override
 	protected String getType() {
 		return Constants.TYPE_JAVA;
