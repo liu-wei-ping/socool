@@ -36,8 +36,7 @@ public class LoginAction {
 	 * @param resp
 	 */
 	@RequestMapping(value = "/code.shtml")
-	public void identifyingCode(final HttpServletRequest req,
-			final HttpServletResponse resp) {
+	public void identifyingCode(final HttpServletRequest req, final HttpServletResponse resp) {
 		try {
 			IdentifyingCodeUtil.getCode(req, resp);
 		} catch (final IOException var4) {
@@ -64,7 +63,7 @@ public class LoginAction {
 	@RequestMapping(value = "/quit.html")
 	public String quit(final HttpSession session, final RedirectAttributes attr) {
 		session.invalidate();
-		return "redirect:/ login.html";
+		return "redirect:/login.html";
 	}
 
 	/**
@@ -75,8 +74,8 @@ public class LoginAction {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/sign.shtml", method = RequestMethod.POST)
-	public Map<String, Object> sign(@RequestBody final UserInfo userInfo,
-			final HttpSession session, final HttpServletRequest request) {
+	public Map<String, Object> sign(@RequestBody final UserInfo userInfo, final HttpSession session,
+			final HttpServletRequest request) {
 		// final String sessionId = session.getId();
 		final Object code = session.getAttribute(Constants.LOGIN_CODE);
 		boolean f = false;
