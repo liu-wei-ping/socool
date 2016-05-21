@@ -19,6 +19,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- 		使用列标签代替列名 -->
 		<setting name="useColumnLabel" value="true" />
 <!-- 		<setting name="enhancementEnabled" value="false" /> -->
+	<!-- 是否开启自动驼峰命名规则 -->
+		 <setting name="mapUnderscoreToCamelCase" value="true"/>
 		<setting name="defaultExecutorType" value="SIMPLE" />
 <!-- 		设置一个时限，以决定让驱动器等待数据库回应的多长时间为超时 -->
 		<setting name="defaultStatementTimeout" value="25000" />
@@ -27,6 +29,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- 	<typeAliases> -->
 <!-- 		<typeAlias alias="communityUserEntry" type="com.community.wcp.entry.user.CommunityUserEntry"/> -->
 <!-- 	</typeAliases> -->
+	<typeAliases>
+			<package name="com.socool.site.entry"/>
+	</typeAliases>
 	<!-- 映射map -->
 	<mappers>
 	</mappers>
