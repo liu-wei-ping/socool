@@ -72,7 +72,8 @@
 			subLi = $('<li><a url="'+url+'">'+item.name+'</a></li>');
 			if(item.submenu && item.submenu.length > 0) {
 
-				$(subLi).children('a').prepend("<img src='http://dl.games.sina.com.cn/wcpan/d/servermgr/images/blank.gif' alt=''/>");
+				$(subLi).children('a').prepend("<img src='../../images/blank.gif' alt=''/>");
+//				$(subLi).children('a').prepend("<img src='http://dl.games.sina.com.cn/wcpan/d/servermgr/images/blank.gif' alt=''/>");
                 callee(item.submenu, subLi);
 			}
 			$(subUl).append(subLi);
