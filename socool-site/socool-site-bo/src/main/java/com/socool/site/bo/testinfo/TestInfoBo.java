@@ -14,6 +14,8 @@ public class TestInfoBo {
 	/*** */
 	private Long id;
 	/*** */
+	private String[] optionsArr;
+	/*** */
 	private String remark;
 	/*** */
 	private String testAnswer;
@@ -21,4 +23,6 @@ public class TestInfoBo {
 	private String testContent;
 	/*** */
 	private String testOptions;
+	/*** */
+	private int type;
 }

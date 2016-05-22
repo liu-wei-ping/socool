@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <style type="text/css">
 	body {background: #3976B3; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0px; margin-bottom:2px;}
 	.active a {color: #FFFFFF;background:#2a68a6;display:block;}
@@ -17,17 +16,17 @@ h1 {color: #FFF;}
 a {color: #FFF; text-decoration: none;/*防止滤镜下链接失效*/position:relative;}
 ul { list-style:none;margin:0px; overflow:hidden;}
 #all {width: 100%;}
-#banner {margin-top: 8px; margin-left: 32px; overflow:hidden; position:relative;}
+#banner {margin-top: 0px; margin-left: 32px; overflow:hidden; position:relative;}
 #banner h1{display:block; width:500px;}
 #main {width: 100%; margin-bottom: 2px; background:#eeeeee; margin-left: 0px; margin-right:0px; height: 30px; color: #000; line-height: 2.4;overflow: auto;}
 #main a {color:#000;}
-#welcome {font-weight: 800; padding-left: 8px; position:absolute;color:#FFF;top:23px;right:13px;}
+#welcome {font-weight: 800; padding-left: 8px; position:absolute;color:#FFF;top:10px;right:13px;}
 #adminop { float:left; width: 59%; position:relative; text-align:right; line-height:1; *line-height:2.2;}
 #nav {width: 100%; clear: both; overflow:hidden;}
 #smenu{float:left;padding-left:30px;}
 #nav ul li {float: left; width:82px; height:25px; line-height: 2.1; text-align: center;margin:0 5px;}
 #manage{overflow:hidden; float:right;width:250px;}
-#manage li{width:80px;margin-top:10px;float: right;}
+#manage li{width:80px;margin-top:0px;float: right;}
 
 .blankgray {background:#bbb; height:2px; width:100%; margin:0; padding:0; clear:both; font-size:2px;}
 

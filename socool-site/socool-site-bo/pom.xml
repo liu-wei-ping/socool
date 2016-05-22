@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>socool-site-bo</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.socool.site</groupId>
+  		<artifactId>socool-site-condition</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

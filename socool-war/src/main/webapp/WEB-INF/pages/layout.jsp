@@ -8,7 +8,7 @@
 <style type="text/css">
 #b_main { overflow: auto;}
 </style>
-<frameset cols="*" rows="100, *,20" id="frame_layout"  border="0">
+<frameset cols="*" rows="80, *,20" id="frame_layout"  border="0">
 	<!-- 显示头部界面 -->
     <frame src="${pageContext.request.contextPath}/main/${type}/header.html" noresize="noresize" name="b_header" id="b_header" />
   

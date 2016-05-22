@@ -39,6 +39,7 @@ function menuTree(leftmenu,baseUrl){
 			// $('#main-content').load(u,function(){});
 			$.ajax({
 				url : u,
+				async:false,
 				cache : false,
 				type : 'GET',
 				dataType : 'html',

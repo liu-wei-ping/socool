@@ -26,4 +26,9 @@ class TestInfoDaoImpl implements ITestInfoDao {
 		return mapper.getTestInfo(condition);
 	}
 
+	@Override
+	public int queryTestInfoCount(final TestInfoCondition condition) {
+		return mapper.getTestInfoCount(condition);
+	}
+
 }

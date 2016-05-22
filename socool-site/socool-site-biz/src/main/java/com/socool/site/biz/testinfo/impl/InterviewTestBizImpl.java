@@ -23,11 +23,19 @@ public class InterviewTestBizImpl extends BaseBiz implements IInterviewTestBiz {
 	private ITestInfoDao iTestInfoDao;
 
 	@Override
-	public List<TestInfoBo> queryInterview() {
-		final TestInfoCondition condition = new TestInfoCondition();
+	public List<TestInfoBo> queryInterview(final TestInfoCondition condition) {
 		final List<TestInfoEntry> entryList = iTestInfoDao.queryTestInfo(condition);
 		final List<TestInfoBo> list = mapList(entryList, TestInfoBo.class);
+		for (final TestInfoBo testInfoBo : list) {
+			final String[] options = testInfoBo.getTestOptions().split(";");
+			testInfoBo.setOptionsArr(options);
+		}
 		return list;
 	}
 
+	@Override
+	public int queryInterviewCount(final TestInfoCondition condition) {
+		final int count = iTestInfoDao.queryTestInfoCount(condition);
+		return count;
+	}
 }

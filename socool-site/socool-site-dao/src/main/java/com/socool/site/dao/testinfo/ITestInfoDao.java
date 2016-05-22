@@ -16,4 +16,10 @@ public interface ITestInfoDao {
 	 * @return
 	 */
 	List<TestInfoEntry> queryTestInfo(TestInfoCondition condition);
+
+	/**
+	 * @param condition
+	 * @return
+	 */
+	int queryTestInfoCount(TestInfoCondition condition);
 }

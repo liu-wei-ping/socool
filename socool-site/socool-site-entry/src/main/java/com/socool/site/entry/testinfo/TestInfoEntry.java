@@ -27,4 +27,6 @@ public class TestInfoEntry extends BaseEntry {
 	private String testContent;
 	/*** */
 	private String testOptions;
+
+	private int type;
 }

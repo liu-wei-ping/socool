@@ -9,5 +9,10 @@ import lombok.Data;
  */
 @Data
 public class TestInfoCondition {
+	private PageCondition rePage;
 	private String testAnswer;
+
+	public TestInfoCondition() {
+		this.rePage = new PageCondition();
+	}
 }
